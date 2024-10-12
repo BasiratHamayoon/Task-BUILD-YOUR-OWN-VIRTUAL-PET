@@ -23,5 +23,22 @@ let pet = {
         alert(`${this.name} aged a year! Age: ${this.age}, Happiness: ${this.happiness}, Hunger: ${this.hunger}`);
     }
 };
+function interactWithPet() {
+    while (true) {
+        let action = prompt("What would you like to do? (feed, play, age, exit)").toLowerCase();
 
-
+        if (action === "feed") {
+            pet.feed();
+        } else if (action === "play") {
+            pet.play();
+        } else if (action === "age") {
+            pet.agePet();
+        } else if (action === "exit") {
+            alert("BYE!👋");
+            break;
+        } else {
+            alert("Invalid action. Please choose 'feed', 'play', 'age', or 'exit'.");
+        }
+    }
+}
+interactWithPet();
