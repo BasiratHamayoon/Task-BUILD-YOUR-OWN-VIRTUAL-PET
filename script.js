@@ -9,6 +9,11 @@ let pet = {
         if (this.hunger < 0) this.hunger = 0;
         alert(`${this.name} has been fed! Hunger is now at ${this.hunger}.`);
     },
-   
+    play: function() {
+        this.happiness += 20;
+        if (this.happiness > 100) this.happiness = 100;
+        alert(`${this.name} played and is now happiness level ${this.happiness}.`);
+    },
+    
 }
 
