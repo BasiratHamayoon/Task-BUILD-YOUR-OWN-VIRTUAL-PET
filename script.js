@@ -1,7 +1,7 @@
 let pet = {
-    name: "Shero",
+    name: "",
     type: "dog",
-    age: 3,
+    age: 0,
     happiness: 50,
     hunger: 40,
     feed: function() {
@@ -23,7 +23,16 @@ let pet = {
         alert(`${this.name} aged a year! Age: ${this.age}, Happiness: ${this.happiness}, Hunger: ${this.hunger}`);
     }
 };
+
+function setupPet() {
+    pet.name = prompt("Enter your pet's name:");
+    pet.age = parseInt(prompt("Enter your pet's age:"));
+    alert(`Meet your pet, ${pet.name}! Age: ${pet.age}, Happiness: ${pet.happiness}, Hunger: ${pet.hunger}.`);
+}
+
 function interactWithPet() {
+    setupPet();
+
     while (true) {
         let action = prompt("What would you like to do? (feed, play, age, exit)").toLowerCase();
 
@@ -41,4 +50,5 @@ function interactWithPet() {
         }
     }
 }
+
 interactWithPet();
